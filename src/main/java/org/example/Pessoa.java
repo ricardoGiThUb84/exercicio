@@ -4,15 +4,21 @@ import java.time.LocalDate;
 
 public class Pessoa {
 
-    public static void main(String[] args) {
+    public String nome;
+    public String sobrenome;
+    public int anoNascimento;
 
-        LocalDate data = LocalDate.now();
-
-        LocalDate dataNasc = LocalDate.of(1984, 4, 9);
+    public LocalDate data = LocalDate.now();
 
 
 
-        System.out.println(dataNasc.getYear());
+    public void mostrarMensagem(){
+
+        int idade = data.getYear() - this.anoNascimento;
+
+        System.out.println("Seu nome é: " + nome + " " + sobrenome + " - idade: " + idade);
+
+
     }
 
 

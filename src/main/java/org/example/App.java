@@ -11,29 +11,28 @@ public class App
 {
     public static void main( String[] args ) {
 
+        Pessoa pessoa = new Pessoa();
+
         Scanner scan = new Scanner(System.in);
 
         System.out.println("Digite seu nome");
 
-        String nome = scan.nextLine();
+        pessoa.nome = scan.nextLine();
 
         System.out.println("Digite seu sobrenome");
 
-        String sobrenome = scan.nextLine();
+        pessoa.sobrenome = scan.nextLine();
 
         System.out.println("Digite ano nascimento");
 
-        int anoNascimento = scan.nextInt();
+        pessoa.anoNascimento = scan.nextInt();
 
         //TODO fechar o scanner;
 
         scan.close();
 
-        LocalDate data = LocalDate.now();
 
-       int idade = data.getYear() - anoNascimento;
-
-        System.out.println("Seu nome é: " + nome + " " + sobrenome + " - idade: " + idade);
+        pessoa.mostrarMensagem();
 
 
 //        (int)dataNascimento.until(LocalDate.now(), ChronoUnit.YEARS);
